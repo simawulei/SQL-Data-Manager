@@ -1,4 +1,4 @@
-# SQL-Data-Manager
+# SQL Data Manager
 Lightweight database tool for data access &amp; manipulation using classes mapped to table in MS SQL Server
 
 This is a class library that allows simple classes to be defined. Once defined, an instance can be created
@@ -19,3 +19,7 @@ allow defining of maximum child levels and specific child types to be loaded.
 Save methods of a class instance will save changes or create new records in the database. Child records
 loaded will also be save recursively.
 
+Primary keys are queried on startup and cached for future use.
+
+Applications that use this library must call SQLDMGlobal.RegisterAssemblyForData on initial startup.
+Environments must also be configured and can be done so manually or in a web.config file.
