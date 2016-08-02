@@ -21,8 +21,6 @@ namespace SQLDM
         public static List<ColumnInfo> GetAllColumnInfo()
         {
             return GetList(@"
-                                use NewBL
-
                                 select
 	                                tc.TABLE_SCHEMA SchemaName
                                     , ku.table_name as TableName
